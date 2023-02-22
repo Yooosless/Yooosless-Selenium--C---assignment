@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.ConstrainedExecution;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Chrome;
@@ -18,17 +18,17 @@ namespace Selenium_C___assignment
             driver.Navigate().GoToUrl("https://app.cloudqa.io/home/AutomationPracticeForm");
 
             // Locate and fill up the First Name field
-            IWebElement firstNameField = driver.FindElement(By.CssSelector("*[id=\"fname\"]"));
+            IWebElement firstNameField = driver.FindElement(By.CssSelector("#fname"));
             firstNameField.Clear();
             firstNameField.SendKeys("John");
 
             // Locate and fill up the Last Name field
-            IWebElement lastNameField = driver.FindElement(By.CssSelector("*[id=\"lname\"]"));
+            IWebElement lastNameField = driver.FindElement(By.CssSelector("#lname"));
             lastNameField.Clear();
             lastNameField.SendKeys("Doe");
 
             // Locate the Gender radio buttons and click on the "Male" option
-            IWebElement maleRadioBtn = driver.FindElement(By.CssSelector("*[id=\"male\"]"));
+            IWebElement maleRadioBtn = driver.FindElement(By.CssSelector("#male"));
             maleRadioBtn.Click();
             
             // Close the browser
@@ -38,3 +38,4 @@ namespace Selenium_C___assignment
         }
     }
 }
+
